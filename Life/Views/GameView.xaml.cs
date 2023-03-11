@@ -45,9 +45,13 @@ public partial class GameView : ContentPage
                     CornerRadius = 0,
                     HasShadow = false
                 };
-                var cellTapGestureRecognizer = new TapGestureRecognizer();
-                cellTapGestureRecognizer.SetBinding(TapGestureRecognizer.CommandProperty, nameof(cell.ToggleCellStateCommand));
-                itemToAdd.GestureRecognizers.Add(cellTapGestureRecognizer);
+
+                // Commented out because this is not currently working for iOS / maccatalyst
+
+                //var cellTapGestureRecognizer = new TapGestureRecognizer();
+                //cellTapGestureRecognizer.SetBinding(TapGestureRecognizer.CommandProperty, nameof(cell.ToggleCellStateCommand));
+                //itemToAdd.GestureRecognizers.Add(cellTapGestureRecognizer);
+
                 itemToAdd.SetBinding(BackgroundColorProperty, nameof(cell.BackgroundColor));
 
                 itemToAdd.BindingContext = cell;

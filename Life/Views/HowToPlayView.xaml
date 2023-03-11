@@ -22,12 +22,26 @@
             TextColor="Black">
             <Label.FormattedText>
                 <FormattedString>
-                    <Span Text="Tap additional cells to make them &quot;alive&quot;. A clustered population of live cells works the best. &#10;&#10;Then press the "/>
+                    <!--<Span Text="Tap additional cells to make them &quot;alive&quot;. A clustered population of live cells works the best. &#10;&#10;Then press the "/>-->
+                    <Span Text="Board is populated with random cells selected. &#10;&#10;Press the  "/>
                     <Span Text="Start" 
                         FontAttributes="Bold"
                         FontSize="Large"/>
 
-                    <Span Text=" button. Rules are applied to the live cells to generate successive populations. &#10;&#10;A population might grow, or shrink, or stagnate, or disappear." />
+                    <Span Text=" button. Rules are applied to the live cells to generate successive populations. &#10;&#10;A population might grow, or shrink, or stagnate, or disappear.&#10;&#10;" />
+                    <Span Text="The Rules are as follows:&#10;"/>
+                    <Span Text="    1. "
+                          FontAttributes="Bold"/>
+                    <Span Text="{Binding Rule1}"/>
+                    <Span Text="    2. "
+                          FontAttributes="Bold"/>
+                    <Span Text="{Binding Rule2}"/>
+                    <Span Text="    3. "
+                          FontAttributes="Bold"/>
+                    <Span Text="{Binding Rule3}"/>
+                    <Span Text="    4. "
+                          FontAttributes="Bold"/>
+                    <Span Text="{Binding Rule4}"/>
                 </FormattedString>
             </Label.FormattedText>
         </Label>
