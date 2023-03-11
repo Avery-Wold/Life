@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Life.ViewModels"
+             x:DataType="viewmodels:MainPageViewModel"
+             x:Class="Life.MainPage"
+             BackgroundColor="WhiteSmoke">
+
+    <NavigationPage.TitleView>
+        <Label Text="The Game of Life!"
+            HorizontalTextAlignment="Center"
+            FontSize="Title"
+            FontAttributes="Bold"
+            TextColor="White"/>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="Margin" Value="0, 10" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="Margin" Value="0, 5" />
+                <Setter Property="BackgroundColor" Value="#8155BA" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <StackLayout>
+        <Label
+            Text="{Binding Description}"
+            Margin="20"
+            FontSize="Large"/>
+
+        <Button Text="How to play"
+            Command="{Binding HowToPlayCommand}" />
+
+        <Button Text="Let's Play!"
+            Command="{Binding PlayCommand}"/>
+    </StackLayout>
+
+</ContentPage>
+
