@@ -6,4 +6,4 @@ MAUI version of Life made using MAUI and dotnet 7.
 MAUI still doesn't seem ready for primetime.  A few issues noticed:
 
 1. Tap Gesture Recognizer is **NOT** working for iOS/Maccatalyst
-2. Page Title is not correct for Android.
+2. Page Title using a Navigation Page is not correct for Android.
